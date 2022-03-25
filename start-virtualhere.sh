@@ -20,7 +20,7 @@ cd data
 echo '*** Deleting previous bus_usb_*-files from data directory ...'
 find . -name '*bus_usb_*' -delete
 echo '*** Checking for new version of VirtualHere ...'
-wget -N https://www.virtualhere.com/sites/default/files/usbserver/$ARCH_VR || echo 'Checking for remote copy of VirtualHere failed'
+wget -N --no-check-certificate https://www.virtualhere.com/sites/default/files/usbserver/$ARCH_VR || echo 'Checking for remote copy of VirtualHere failed'
 
 chmod +x ./$ARCH_VR
 ./$ARCH_VR
